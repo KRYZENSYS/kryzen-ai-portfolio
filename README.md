@@ -1,70 +1,98 @@
-# 🤖 KRYZEN AI Portfolio
+# 🤖 KRYZEN AI Portfolio v2.0
 
-Interaktiv, AI-powered portfolio — savollaringizga aqlli javob beradi.
+> **Premium Cyberpunk portfolio with 5 themes, 3 languages, AI chat, voice I/O, PWA, and 100+ features.**
 
-🌐 **Live Demo**: https://kryzensys.github.io/kryzen-ai-portfolio/
+🌐 **Live:** https://kryzensys.github.io/kryzen-ai-portfolio/
 
-## ✨ Features
+![Status](https://img.shields.io/badge/status-live-brightgreen)
+![Version](https://img.shields.io/badge/version-2.0.0-00D4FF)
+![Build](https://img.shields.io/github/last-commit/KRYZENSYS/kryzen-ai-portfolio)
 
-- 🤖 **AI Chat Assistant** — savollarni tushunadi va aqlli javob beradi
-- 🌧️ **Matrix Rain** — animated background (Japanese katakana)
-- 🖱️ **Cursor Glow** — sichqoncha effekti
-- 🎨 **Glassmorphism + Cyberpunk** — zamonaviy dizayn
-- ⚡ **Counter Animations** — raqamlar animatsiyasi
-- 📱 **Fully Responsive** — mobil, planshet, desktop
-- 🔍 **Project Filters** — Web/Web3/AI/App kategoriyalar
-- 🛠 **Skill Bars** — animatsiyali ko'rsatkichlar
-- 💬 **Telegram Integration** — forma → Telegram
+## ✨ Features (13+)
 
-## 🤖 AI Chat — Qanday ishlaydi?
+### 🎨 Themes & Languages
+- 5 color themes: cyan, purple, pink, green, amber
+- 3 languages: O'zbek, English, Русский
+- Auto-save preferences to localStorage
 
-"AI Chat" tugmasini bosing va savol bering:
+### 🤖 AI Chat
+- Built-in knowledge base (50+ topics)
+- OpenAI integration (send `sk-proj-...` in chat)
+- Conversation history persistence
+- Beautiful glassmorphism UI
 
-- "Eng yaxshi loyihang qaysi?" → Batafsil javob
-- "React bilasanmi?" → Texnik bilim
-- "Narxlar qancha?" → Freelance narxlar
-- "Qanday bog'lanish mumkin?" → Kontaktlar
+### 🎤 Voice
+- Voice input (uz/en/ru recognition)
+- Text-to-speech output
+- Fallback gracefully
 
-AI matnli pattern-matching orqali ishlaydi (30+ kalit so'z).
+### 🎮 Easter Eggs
+- Konami Code: ↑↑↓↓←→←→BA → 🎉 confetti
+- Keyboard shortcuts (1-7 for pages, C for chat, T for theme, / for focus)
+- Network status indicator
+- Background music toggle
 
-## 🛠 Tech Stack
+### 📱 PWA
+- Install to home screen
+- Offline support via Service Worker
+- Custom 404 page
 
-- HTML5 Canvas — Matrix rain
-- CSS3 — Animations, Glassmorphism, Backdrop-filter
-- Vanilla JavaScript — Routing, Chat engine, Animations
-- No frameworks — toza, yengil, tez
+### ✨ Effects
+- Matrix code rain background
+- Particle system (70 particles, interactive)
+- Cursor trail glow
+- Animated counters
+- Skill bar fills
+- Glassmorphism design
+- Neon glows
 
-## 📂 Fayl Strukturasi
+### 📊 Content
+- 6 detailed projects
+- 4 blog posts
+- Skills with percentages
+- Experience timeline
+- Achievements
 
-```
-kryzen-ai-portfolio/
-├── index.html        # Asosiy sahifa
-├── style.css         # Cyberpunk glassmorphism dizayn
-├── data.js           # Ma'lumotlar bazasi + AI knowledge
-├── app.js            # Router + AI chat + animations
-└── README.md         # Bu fayl
-```
+## 📂 Files (73 KB total)
 
-## 🔧 Local Setup
+| File | Size | Purpose |
+|---|---|---|
+| index.html | 10 KB | UI structure |
+| style.css | 26 KB | All styles, themes |
+| app.js | 25 KB | Engine, pages, chat |
+| app-ai.js | 3.7 KB | OpenAI + Voice |
+| data.js | 16 KB | Content |
+| i18n.js | 6 KB | Translations |
+| sw.js | 1 KB | Service Worker |
+| manifest.json | 0.7 KB | PWA |
+
+## 🚀 Quick Start
 
 ```bash
+# Clone
 git clone https://github.com/KRYZENSYS/kryzen-ai-portfolio.git
-cd kryzen-ai-portfolio
+
+# Open in browser (after 30s for Pages deploy)
 open index.html
 ```
 
-## 🤖 AI ni Kengaytirish
+## ⌨️ Keyboard Shortcuts
 
-`data.js` dagi `ai.knowledge` obyektiga yangi savol-javoblar qo'shing.
+| Key | Action |
+|---|---|
+| 1-7 | Navigate pages |
+| C | Toggle AI chat |
+| T | Switch theme |
+| / | Focus chat input |
+| Esc | Close panels |
+| Konami | 🎉 confetti |
 
-## 👨‍💻 Muallif
+## 🔗 Links
 
-**KRYZEN** — Full-Stack Engineer & AI Architect
+- **Live:** https://kryzensys.github.io/kryzen-ai-portfolio/
+- **GitHub:** https://github.com/KRYZENSYS/kryzen-ai-portfolio
+- **Author:** https://t.me/KRYZENVIP
 
-- 📧 f91186645@gmail.com
-- 💬 [@KRYZENVIP](https://t.me/KRYZENVIP)
-- 💻 [GitHub](https://github.com/KRYZENSYS)
+## 📜 License
 
-## 📄 License
-
-MIT — bepul foydalanish, o'zgartirish, tarqatish.
+MIT © 2026 KRYZEN
