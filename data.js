@@ -1,4 +1,4 @@
-/* ===== KRYZEN Portfolio v2.0 — Profile & Knowledge Base ===== */
+/* ===== KRYZEN Portfolio — Data + Blog + AI Knowledge ===== */
 window.DATA = {
   profile: {
     name: "KRYZEN",
@@ -34,17 +34,17 @@ window.DATA = {
       demo: "https://t.me/Mira_bot",
       github: null,
       featured: true },
-    { id: 4, name: "KRYZEN AI Portfolio v2.0", category: "web", year: 2026, status: "live", thumb: "✨",
-      desc: "AI bilan ishlovchi interaktiv portfolio. 5 ta tema, 3 til, ovozli kiritish, real-time chat, PWA.",
-      tech: ["Vanilla JS", "CSS3", "AI Engine", "PWA"],
-      demo: "https://kryzensys.github.io/kryzen-ai-portfolio/",
-      github: "https://github.com/KRYZENSYS/kryzen-ai-portfolio",
-      featured: false },
-    { id: 5, name: "Crypto Tracker Pro", category: "app", year: 2025, status: "live", thumb: "💰",
+    { id: 4, name: "Crypto Tracker Pro", category: "app", year: 2025, status: "live", thumb: "💰",
       desc: "Real-time cryptocurrency narxlarini kuzatish uchun app. Portfolio boshqaruvi, alert, tarix.",
       tech: ["React", "CoinGecko API", "Chart.js", "Firebase"],
       demo: "#",
       github: "https://github.com/KRYZENSYS/crypto-tracker",
+      featured: false },
+    { id: 5, name: "KRYZEN AI Portfolio (this)", category: "web", year: 2026, status: "live", thumb: "✨",
+      desc: "AI bilan ishlovchi interaktiv portfolio. 5 ta tema, 3 til, ovozli I/O, PWA, konami easter egg.",
+      tech: ["Vanilla JS", "CSS3 Animations", "Canvas", "AI Logic"],
+      demo: "https://kryzensys.github.io/kryzen-ai-portfolio/",
+      github: "https://github.com/KRYZENSYS/kryzen-ai-portfolio",
       featured: false },
     { id: 6, name: "Task Management System", category: "app", year: 2024, status: "dev", thumb: "📋",
       desc: "Jamoaviy vazifalar boshqaruvi tizimi. Real-time sync, role-based access, file sharing.",
@@ -52,6 +52,33 @@ window.DATA = {
       demo: "#",
       github: "https://github.com/KRYZENSYS/task-manager",
       featured: false }
+  ],
+
+  posts: [
+    { id: 1, title: "🤖 AI bilan Portfolio yaratish — to'liq qo'llanma",
+      excerpt: "Qanday qilib AI-powered portfolio yaratish mumkin? OpenAI, prompt engineering va deploy haqida batafsil.",
+      content: "Bugun siz bilan AI yordamida professional darajadagi portfolio yaratishni ko'rib chiqamiz.\n\n## Nima uchun AI portfolio?\n\nAI portfolio oddiy portfolio'dan farqli ravishda:\n- Interaktiv suhbat qobiliyati\n- Aqlli javob berish\n- Foydalanuvchi tajribasini oshirish\n- 24/7 mavjudlik\n\n## Texnik stack\n\n- HTML5 + CSS3 (Glassmorphism, Cyberpunk dizayn)\n- Vanilla JavaScript (no framework!)\n- OpenAI API yoki local AI knowledge base\n- GitHub Pages (deploy)\n\n## Qadam-baqadam\n\n1. HTML struktura — semantic va toza\n2. CSS — Glassmorphism + Animations\n3. JS — Page router, AI engine\n4. Deploy — GitHub Pages\n\nXulosa: AI portfolio — bu kelajak. Kimki ertaroq boshlasa, ko'proq vaqt va tajriba orttiradi.",
+      category: "AI", date: "2026-06-28", readTime: 5, views: 1240, comments: 23, likes: 89 },
+    { id: 2, title: "⚛️ React 19 yangiliklari — nimalar o'zgardi?",
+      excerpt: "React 19 da yangi hooks, Server Components, va Actions. Loyihalaringizni qanday yangilash kerak?",
+      content: "React 19 — bu katta yangilanish.\n\n## Asosiy yangiliklar\n\n### 1. Server Components (Stable)\nEndi serverda render qilish rasmiy stable.\n\n### 2. Actions\nForma yuborish endi yanada oson:\n```jsx\nfunction Form() {\n  async function action(formData) {\n    'use server';\n    await save(formData);\n  }\n  return <form action={action}>...</form>;\n}\n```\n\n### 3. use() Hook\nPromise va Context o'qish:\n```jsx\nconst data = use(fetch('/api/data'));\n```\n\n### 4. useOptimistic\nOptimistik UI yangilanishlari.\n\n## Migratsiya\n\n1. npm install react@19 react-dom@19\n2. TypeScript yangilash (5.4+)\n3. Test — yangi versiyalar bilan\n\nReact 19 — production-ready.",
+      category: "React", date: "2026-06-25", readTime: 7, views: 2100, comments: 45, likes: 156 },
+    { id: 3, title: "🎨 Glassmorphism dizayn — kelajakmi yoki o'tkinchi trend?",
+      excerpt: "Glassmorphism, neumorphism, brutalism — qaysi biri eng yaxshi? Dizayn falsafasi va amaliy qo'llanma.",
+      content: "Dizayn dunyosi doimo o'zgaradi.\n\n## Glassmorphism nima?\n\nBu — shaffof yuzalar, blur effektlari va nozik chegaralar bilan ajralib turuvchi dizayn tili.\n\n## Asosiy printsiplar\n\n1. **Shaffoflik** — orqa fonni ko'rish\n2. **Blur** — backdrop-filter: blur(20px)\n3. **Nozik borderlar** — 1px rgba(255,255,255,0.1)\n4. **Yorug'lik** — gradient yoki glassmorphic shadow\n\n## CSS qo'llanma\n\n```css\n.glass {\n  background: rgba(255,255,255,0.1);\n  backdrop-filter: blur(20px);\n  border: 1px solid rgba(255,255,255,0.2);\n  border-radius: 16px;\n}\n```\n\n## Qachon ishlatish?\n\n✅ Dark mode uchun zo'r\n✅ Cyberpunk/sci-fi loyihalar\n✅ Dashboard va admin panel\n❌ Matn ko'p bo'lsa — o'qish qiyin\n❌ Yengil ranglar — kontrast past\n\nXulosa: Glassmorphism bu kelajak — ayniqsa dark mode'da.",
+      category: "Design", date: "2026-06-20", readTime: 6, views: 1850, comments: 34, likes: 121 },
+    { id: 4, title: "🚀 GitHub Pages bilan bepul deploy — batafsil qo'llanma",
+      excerpt: "Custom domain, HTTPS, CI/CD — barchasi bepul. GitHub Pages ning yashirin imkoniyatlari.",
+      content: "GitHub Pages — bu bepul va ishonchli hosting.\n\n## Qanday ishlaydi?\n\n1. Repository yarating\n2. Settings → Pages\n3. Branch tanlang (main)\n4. 1-2 daqiqada sayt tayyor!\n\n## Custom domain\n\n1. CNAME fayl yarating:\n```\nyoursite.com\n```\n2. DNS sozlamalari:\n- A record: 185.199.108.153\n- CNAME: username.github.io\n\n3. HTTPS — automatic!\n\n## CI/CD bilan deploy\n\nGitHub Actions bilan:\n```yaml\nname: Deploy\non:\n  push:\n    branches: [main]\njobs:\n  deploy:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v3\n      - run: npm run build\n      - uses: peaceiris/actions-gh-pages@v3\n```\n\n## Limitlar\n\n- 1 GB storage\n- 100 GB traffic/oy\n- Faqat static content\n\nLekin portfolio, blog, landing — uchun ideal!",
+      category: "DevOps", date: "2026-06-15", readTime: 4, views: 980, comments: 18, likes: 67 },
+    { id: 5, title: "💡 Prompt Engineering — AI bilan ishlash san'ati",
+      excerpt: "Yaxshi prompt yozish — bu yangi dasturlash. OpenAI, Claude, va boshqa AI modellar bilan samarali ishlash.",
+      content: "Prompt engineering — bu kelajak kasbi.\n\n## Asosiy tamoyillar\n\n1. **Aniq bo'ling** — "Yaxshi maqola yoz" emas, "500 so'zli maqola, 3 ta bo'lim bilan, hacker uslubida"\n\n2. **Rol bering** — "Sen 10 yil tajribaga ega full-stack dasturchisan..."\n\n3. **Format ko'rsating** — JSON, Markdown, ro'yxat\n\n4. **Misollar bering** — few-shot learning\n\n## Misol\n\n```\nSen professional copywriter san.\nMahsulot: KRYZEN Portfolio\nMaqsad: investor jalb qilish\nFormat: 3 paragraf, emosional, ilhomlantiruvchi\nUzunligi: 150 so'z\n\nYoz:\n```\n\n## Texnikalar\n\n- **Chain of Thought** — "Avval o'yla, keyin yoz"\n- **ReAct** — Reasoning + Acting\n- **Tree of Thoughts** — bir nechta yo'l ko'rib chiqish\n- **Self-Consistency** — bir nechta javob solishtirish\n\n## Vositalar\n\n- LangChain — Python/JS\n- LlamaIndex — RAG uchun\n- Guidance — Microsoft\n- Anthropic Console — Claude uchun\n\nPrompt engineering — bu kelajak. O'rganing!",
+      category: "AI", date: "2026-06-10", readTime: 8, views: 3200, comments: 67, likes: 245 },
+    { id: 6, title: "🌐 Web3 va DeFi — 2026 holati",
+      excerpt: "Blockchain, smart contract, DEX. Web3 rivojlanishi va kelajakdagi imkoniyatlar.",
+      content: "2026 yilda Web3 katta o'zgarishlar bilan.\n\n## Asosiy tushunchalar\n\n- **DeFi** — Decentralized Finance\n- **NFT** — Non-Fungible Tokens\n- **DAO** — Decentralized Autonomous Organization\n- **dApp** — Decentralized App\n\n## Texnologiyalar\n\n- **Ethereum** — eng katta ekotizim\n- **Solana** — tez va arzon\n- **Polygon** — Layer 2 yechim\n- **TON** — Telegram integratsiya\n\n## Dasturchi uchun\n\n```solidity\n// Smart contract misol\ncontract Token {\n  mapping(address => uint) balances;\n  function transfer(address to, uint amount) public {\n    balances[msg.sender] -= amount;\n    balances[to] += amount;\n  }\n}\n```\n\n## Kelajak\n\n- RWA (Real World Assets) — tokenizatsiya\n- AI + Web3 integratsiya\n- Cross-chain yechimlar\n- Mass adoption\n\nWeb3 — bu kelajak. O'rganishni boshlang!",
+      category: "Web3", date: "2026-06-05", readTime: 9, views: 1560, comments: 28, likes: 98 }
   ],
 
   skills: [
@@ -93,94 +120,6 @@ window.DATA = {
     { icon: "⭐", title: "Top Rated Freelancer", desc: "Yuqori sifatli ish natijalari uchun" }
   ],
 
-  blogPosts: [
-    { id: 1, title: "KRYZEN Portfolio v2.0 chiqdi!", category: "Yangilik", date: "2026-06-30", views: "1.2K", comments: 12, icon: "🚀",
-      excerpt: "5 ta rang mavzusi, 3 til, AI chat, ovozli kiritish, PWA, GitHub stats — barchasi bitta saytda!",
-      content: `
-        <p>Salom! Bugun <strong>KRYZEN Portfolio v2.0</strong> ni chiqardim. Bu katta upgrade — 8 ta yangi funksiya qo'shildi:</p>
-        <ul style="margin:12px 0 12px 20px;line-height:1.8">
-          <li>🎨 <strong>5 ta rang mavzusi</strong> — cyan, purple, pink, green, amber</li>
-          <li>🌍 <strong>3 til</strong> — O'zbek, English, Русский</li>
-          <li>🤖 <strong>Real OpenAI API</strong> integratsiya</li>
-          <li>🎤 <strong>Ovozli kiritish/chiqarish</strong></li>
-          <li>🌧️ <strong>Particle system</strong> va cursor trail</li>
-          <li>🎮 <strong>Konami Code</strong> easter egg</li>
-          <li>⌨️ <strong>Keyboard shortcuts</strong> (1-6)</li>
-          <li>📱 <strong>PWA</strong> — oflayn ishlash</li>
-        </ul>
-        <p>Yana <strong>blog tizimi</strong>, GitHub stats widget, background music, va ko'p narsalar qo'shildi.</p>
-        <p>Manba: <a href="https://github.com/KRYZENSYS/kryzen-ai-portfolio" target="_blank">github.com/KRYZENSYS</a></p>
-      `
-    },
-    { id: 2, title: "React vs Next.js: Qaysi birini tanlash?", category: "Darslik", date: "2026-06-25", views: "3.4K", comments: 24, icon: "⚛️",
-      excerpt: "React va Next.js o'rtasidagi farqlar, qachon qaysi biri yaxshi, misollar bilan tushuntirish.",
-      content: `
-        <p><strong>React</strong> — bu UI kutubxona, <strong>Next.js</strong> — bu framework React ustida.</p>
-        <p style="margin-top:12px"><strong>React ishlatish kerak:</strong></p>
-        <ul style="margin:8px 0 12px 20px">
-          <li>SPA (Single Page Application)</li>
-          <li>Admin panel yoki dashboard</li>
-          <li>Kichik web app</li>
-        </ul>
-        <p><strong>Next.js ishlatish kerak:</strong></p>
-        <ul style="margin:8px 0 12px 20px">
-          <li>SEO muhim bo'lgan saytlar</li>
-          <li>Landing page, blog, e-commerce</li>
-          <li>Server-side rendering kerak</li>
-        </ul>
-        <p style="margin-top:12px">Mening tavsiyam: <strong>Next.js</strong> — chunki u ko'proq imkoniyat beradi va production-da yaxshiroq.</p>
-      `
-    },
-    { id: 3, title: "AI bilan ishlash: 5 ta maslahat", category: "AI", date: "2026-06-20", views: "5.1K", comments: 38, icon: "🧠",
-      excerpt: "OpenAI va Claude API bilan samarali ishlash sirlari. Prompt engineering asoslari.",
-      content: `
-        <p>AI modellari bilan ishlashda <strong>5 ta muhim qoida</strong>:</p>
-        <ol style="margin:12px 0 12px 20px;line-height:1.8">
-          <li><strong>Aniq bo'ling</strong> — "Yaxshi kod yoz" emas, "TypeScript'da REST API uchun validator class yoz"</li>
-          <li><strong>Kontekst bering</strong> — oldingi xabarlar, kod namunasi, muhit</li>
-          <li><strong>Rol bering</strong> — "Sen 10 yil tajribaga ega full-stack dasturchisan"</li>
-          <li><strong>Format ko'rsating</strong> — JSON, markdown, ro'yxat, jadval</li>
-          <li><strong>Misollar bering</strong> — "Misol uchun: ..."</li>
-        </ol>
-        <p>Bu qoidalarni qo'llasangiz, AI javoblari <strong>3-5x</strong> yaxshiroq bo'ladi.</p>
-      `
-    },
-    { id: 4, title: "Cyberpunk dizayn: To'liq qo'llanma", category: "Dizayn", date: "2026-06-15", views: "2.8K", comments: 16, icon: "🎨",
-      excerpt: "Neon ranglar, glassmorphism, glitch effect — cyberpunk uslubidagi sayt yaratish sirlari.",
-      content: `
-        <p>Cyberpunk dizaynning <strong>3 ta asosiy elementi</strong>:</p>
-        <ul style="margin:12px 0 12px 20px;line-height:1.8">
-          <li>🎨 <strong>Neon ranglar</strong> — cyan (#00D4FF), magenta (#FF00FF), purple (#8B5CF6)</li>
-          <li>🪟 <strong>Glassmorphism</strong> — yarim shaffof, blur(20px), border-radius</li>
-          <li>✨ <strong>Animatsiyalar</strong> — glow, pulse, glitch, particle</li>
-        </ul>
-        <p>Quyidagi CSS kod namunasi:</p>
-        <pre style="background:#0e0e14;padding:12px;border-radius:8px;margin-top:8px;font-family:monospace;font-size:12px;color:#00D4FF">
-.glass-card {
-  background: rgba(20, 20, 30, 0.5);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 212, 255, 0.3);
-  border-radius: 20px;
-  box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
-}</pre>
-      `
-    }
-  ],
-
-  githubStats: {
-    repos: 47,
-    stars: 234,
-    followers: 89,
-    contributions: 1247,
-    topLangs: [
-      { name: "JavaScript", pct: 38, color: "#f1e05a" },
-      { name: "Python", pct: 28, color: "#3572A5" },
-      { name: "HTML/CSS", pct: 18, color: "#e34c26" },
-      { name: "TypeScript", pct: 12, color: "#2b7489" },
-      { name: "Boshqa", pct: 4, color: "#8b8ba3" }
-    ]
-  },
-
   ai: {
     knowledge: {
       kim: "Men KRYZEN — full-stack dasturchi va AI engineer. O'zbekistonda ishlayman, 5+ yil tajribaga egaman. Web, AI va mobil ilovalar yarataman.",
@@ -193,10 +132,10 @@ window.DATA = {
       python: "Python — AI/ML va backend uchun ishlataman. Django, FastAPI, Flask bilan tajribam bor. Data science uchun pandas, numpy.",
       ai: "AI bo'yicha 2+ yil tajribam bor. OpenAI GPT, Claude API, LangChain framework. RAG, prompt engineering, fine-tuning — barchasi.",
       loyiha: "Mening eng katta loyihalarim: KRYZEN BookFinder (kitob qidiruv platformasi), BLOCKVERSE V3 (Web3 landing), KRYZEN AI Assistant (Telegram bot, 200+ funksiya).",
-      engYaxshi: "Eng yaxshi loyihalarim: KRYZEN BookFinder va BLOCKVERSE. Ikkalasi production'da va ko'p odamlar ishlatadi.",
+      engYaxshi: "Eng yaxshi loyihalarim: KRYZEN BookFinder va BLOCKVERSE. Ikkalasi production'da va ko'p odamlar ishlatadi. Texnik jihatdan eng murakkab — AI Assistant, chunki 200+ funksiya bor.",
       bookfinder: "KRYZEN BookFinder — bu mening premium kitob qidiruv platformam. Open Library, Gutendex, Google Books — 3 ta API ni birlashtirgan. Oflayn rejim, dark mode, AI tavsiyalar, admin panel, foydalanuvchi tizimi — hammasi bor.",
       blockverse: "BLOCKVERSE V3 — Web3 va blockchain mavzusidagi premium landing page. Cyberpunk estetika, 3D animatsiya, glitch effect. To'liq responsive va production darajasida.",
-      telegram: "Telegram'da @KRYZENVIP orqali bog'lanish mumkin. Shuningdek, mening AI assistent botim @Mira_bot — u ham Telegram'da ishlaydi.",
+      telegram: "Telegram'da @KRYZENVIP orqali bog'lanish mumkin. Shuningdek, mening AI assistent botim @Mira_bot — u ham Telegram'da ishlaydi va 200+ funksiya bor.",
       email: "Email: f91186645@gmail.com. Tez orada javob beraman, lekin Telegram orqali tezroq aloqa.",
       github: "GitHub: https://github.com/KRYZENSYS. Barcha open-source loyihalarim shu yerda. Kodlarimga bepul kirishingiz mumkin.",
       instagram: "Instagram: @KRYZENVIP. Bu yerda yangi loyihalar va ishlarim haqida story'lar joylashtiraman.",
@@ -205,9 +144,8 @@ window.DATA = {
       ish: "Ishlashga tayorman. Freelance, part-time, full-time — barchasi mumkin. Masofadan ishlash — asosiy. Toshkentda ofisga ham bora olaman.",
       yordam: "Ha! Sizga qanday yordam bera olaman? Loyiha buyurtma qilmoqchimisiz, texnik maslahat kerakmi, yoki portfolio haqida savol bormi?",
       salom: "Salom! 👋 Men KRYZEN AI — sizga loyihalar, ko'nikmalar va tajriba haqida gaplashish uchun tayyorman. Savol bering!",
-      rahmat: "Arzimaydi! 😊 Boshqa savollaringiz bo'lsa — bemalol so'rang. Sizning vaqtingiz qadrli.",
+      rahmat: "Arzimaydi! 😊 Boshqa savollaringiz bo'lsa — bemalol so'rang. Sizning vaqtingiz qadrli, shuning uchun batafsil javob berishga harakat qilaman.",
       hayr: "Xayr! 👋 Portfolio bilan tanishganingiz uchun rahmat. Qaytib keling — yangi loyihalar qo'shiladi!",
-      version: "Bu portfolio v2.0! 5 ta rang mavzusi, 3 til, AI chat, ovozli kiritish, PWA va boshqa ko'p narsalar qo'shildi. ↑↑↓↓←→←→BA — easter egg bor!",
       default: "Qiziqarli savol! Aniqroq aytib bera olasizmi? Masalan: 'Eng yaxshi loyihang qaysi?', 'React bilasanmi?', 'Narxlar qancha?', 'Ishlashga tayormisan?' kabi savollar bersangiz — batafsil javob beraman."
     }
   }
