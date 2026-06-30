@@ -667,3 +667,5 @@ window.addEventListener('DOMContentLoaded', () => {
     Chat.load();
   }, 800);
 });
+\n// Load enhancer
+(function(){var s=document.createElement('script');s.src='enhancer.js';s.defer=true;document.head.appendChild(s)})();
