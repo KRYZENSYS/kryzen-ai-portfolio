@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#00D4FF">
+<meta name="description" content="KRYZEN AI Portfolio — Interaktiv AI yordamchi bilan portfolio. Loyihalar, ko'nikmalar, AI chat.">
+<meta name="keywords" content="KRYZEN, portfolio, AI, developer, fullstack, cyberpunk">
+<meta name="author" content="KRYZEN">
+<title>🤖 KRYZEN AI Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- MATRIX RAIN BG -->
+<canvas id="bgCanvas"></canvas>
+
+<!-- LOADING -->
+<div id="loading">
+  <div class="loader-ring"></div>
+  <div class="loader-text">KRYZEN<span class="dots"></span></div>
+  <div class="loader-sub">Initializing AI core...</div>
+</div>
+
+<!-- CURSOR GLOW -->
+<div id="cursorGlow"></div>
+
+<!-- NAV -->
+<header class="topbar">
+  <div class="logo" onclick="App.go('home')">
+    <span class="logo-bracket">[</span>
+    <span class="logo-text">KRYZEN</span>
+    <span class="logo-bracket">]</span>
+    <span class="logo-sub">AI.PORTFOLIO</span>
+  </div>
+  <nav class="nav" id="nav">
+    <a class="nav-link active" data-page="home" onclick="App.go('home')">🏠 Home</a>
+    <a class="nav-link" data-page="about" onclick="App.go('about')">👤 About</a>
+    <a class="nav-link" data-page="projects" onclick="App.go('projects')">💼 Projects</a>
+    <a class="nav-link" data-page="skills" onclick="App.go('skills')">🛠 Skills</a>
+    <a class="nav-link" data-page="experience" onclick="App.go('experience')">📅 Experience</a>
+    <a class="nav-link" data-page="contact" onclick="App.go('contact')">📧 Contact</a>
+  </nav>
+  <button class="ai-toggle" onclick="App.toggleChat()">
+    <span class="ai-dot"></span> AI Chat
+  </button>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+  <div class="hero-grid">
+    <div class="hero-left fade-in">
+      <div class="hero-status">
+        <span class="status-dot"></span> AVAILABLE FOR HIRE
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-greet">Salom, men</span>
+        <span class="hero-name glow">KRYZEN</span>
+        <span class="hero-role">Full-Stack Developer</span>
+        <span class="hero-spec">+ AI Engineer</span>
+      </h1>
+      <p class="hero-desc">
+        Cyberpunk dizayn va AI yechimlar yarataman. 
+        Zamonaviy web, mobil va AI loyihalar — 5+ yil tajriba.
+      </p>
+      <div class="hero-cta">
+        <button class="btn primary" onclick="App.go('projects')">
+          💼 Loyihalarni ko'rish
+        </button>
+        <button class="btn ghost" onclick="App.toggleChat(true)">
+          🤖 AI bilan suhbat
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-val" data-count="50">0</div>
+          <div class="stat-label">Loyihalar</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val" data-count="25">0</div>
+          <div class="stat-label">Mijozlar</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val" data-count="5">0</div>
+          <div class="stat-label">Yil tajriba</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val" data-count="100">0</div>
+          <div class="stat-label">% Sifat</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right fade-in">
+      <div class="avatar-card glass">
+        <div class="avatar-hex">
+          <div class="avatar-inner">
+            <div class="avatar-symbol">K</div>
+          </div>
+          <div class="avatar-ring r1"></div>
+          <div class="avatar-ring r2"></div>
+          <div class="avatar-ring r3"></div>
+        </div>
+        <div class="avatar-tags">
+          <span class="tag">⚛️ React</span>
+          <span class="tag">🐍 Python</span>
+          <span class="tag">🤖 AI</span>
+          <span class="tag">🔥 Node.js</span>
+          <span class="tag">☁️ AWS</span>
+          <span class="tag">📱 Mobile</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">↓ scroll</div>
+</section>
+
+<!-- MAIN -->
+<main id="main"></main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="logo">
+        <span class="logo-bracket">[</span>
+        <span class="logo-text">KRYZEN</span>
+        <span class="logo-bracket">]</span>
+      </div>
+      <p class="footer-text">AI-powered portfolio. Built with ❤️ and 🤖</p>
+    </div>
+    <div>
+      <h4 class="footer-title">Quick Links</h4>
+      <a class="footer-link" onclick="App.go('home')">Home</a>
+      <a class="footer-link" onclick="App.go('projects')">Projects</a>
+      <a class="footer-link" onclick="App.go('contact')">Contact</a>
+    </div>
+    <div>
+      <h4 class="footer-title">Connect</h4>
+      <a href="https://github.com/KRYZENSYS" target="_blank" class="footer-link">💻 GitHub</a>
+      <a href="https://t.me/KRYZENVIP" target="_blank" class="footer-link">📨 Telegram</a>
+      <a href="https://instagram.com/KRYZENVIP" target="_blank" class="footer-link">📷 Instagram</a>
+      <a href="mailto:f91186645@gmail.com" class="footer-link">✉️ Email</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 KRYZEN. Crafted with AI.
+  </div>
+</footer>
+
+<!-- AI CHAT WIDGET -->
+<div id="chatPanel" class="chat-panel">
+  <div class="chat-header">
+    <div class="chat-title">
+      <span class="ai-pulse"></span>
+      <span>KRYZEN AI</span>
+      <span class="chat-status">online</span>
+    </div>
+    <button class="chat-close" onclick="App.toggleChat()">✕</button>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="msg ai">
+      <div class="msg-avatar">🤖</div>
+      <div class="msg-body">
+        <div class="msg-name">KRYZEN AI</div>
+        <div class="msg-text">
+          Salom! 👋 Men KRYZEN ning AI yordamchisiman. 
+          <br><br>Loyihalar, ko'nikmalar, tajriba haqida savol bering.
+          <br><br>Misol: <em>"Eng yaxshi loyihang qaysi?"</em> yoki <em>"React bilasanmi?"</em>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="chat-suggestions" id="chatSuggestions">
+    <button class="suggestion" onclick="Chat.ask('Eng yaxshi loyihalaring qaysi?')">Eng yaxshi loyihalar</button>
+    <button class="suggestion" onclick="Chat.ask('Qanday texnologiyalar ishlatasan?')">Texnologiyalar</button>
+    <button class="suggestion" onclick="Chat.ask('Tajribang haqida gapir')">Tajriba</button>
+    <button class="suggestion" onclick="Chat.ask('Qanday bog'lanish mumkin?')">Bog'lanish</button>
+  </div>
+  <form class="chat-input" id="chatForm">
+    <input type="text" id="chatInput" placeholder="Savol bering..." autocomplete="off">
+    <button type="submit" class="chat-send">📤</button>
+  </form>
+</div>
+
+<!-- TOAST -->
+<div id="toastZone"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
