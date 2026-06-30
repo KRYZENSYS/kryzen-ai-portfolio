@@ -3,24 +3,17 @@
   "short_name": "KRYZEN",
   "description": "AI-powered interactive portfolio with chat assistant",
   "start_url": "/kryzen-ai-portfolio/",
-  "scope": "/kryzen-ai-portfolio/",
   "display": "standalone",
   "background_color": "#09090b",
   "theme_color": "#00D4FF",
   "orientation": "portrait-primary",
+  "categories": ["portfolio", "productivity", "developer"],
   "icons": [
     {
-      "src": "https://api.iconify.design/emojione:robot-face.svg",
-      "sizes": "192x192",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "https://api.iconify.design/emojione:robot-face.svg",
+      "src": "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 512 512%22><rect width=%22512%22 height=%22512%22 fill=%22%2300D4FF%22/><text x=%22256%22 y=%22340%22 font-size=%22280%22 text-anchor=%22middle%22>🤖</text></svg>",
       "sizes": "512x512",
       "type": "image/svg+xml",
       "purpose": "any maskable"
     }
-  ],
-  "categories": ["portfolio", "productivity", "developer"]
+  ]
 }
