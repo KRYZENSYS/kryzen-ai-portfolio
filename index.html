@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="uz" data-theme="cyan">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
@@ -7,7 +7,28 @@
 <meta name="description" content="KRYZEN AI Portfolio — Interaktiv AI yordamchi bilan portfolio. Loyihalar, ko'nikmalar, AI chat.">
 <meta name="keywords" content="KRYZEN, portfolio, AI, developer, fullstack, cyberpunk">
 <meta name="author" content="KRYZEN">
+
+<!-- Open Graph -->
+<meta property="og:title" content="🤖 KRYZEN AI Portfolio">
+<meta property="og:description" content="AI-powered interactive portfolio with chat assistant">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kryzensys.github.io/kryzen-ai-portfolio/">
+<meta property="og:image" content="https://kryzensys.github.io/kryzen-ai-portfolio/og.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="🤖 KRYZEN AI Portfolio">
+<meta name="twitter:description" content="AI-powered interactive portfolio">
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="KRYZEN">
+
 <title>🤖 KRYZEN AI Portfolio</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,17 +36,32 @@
 <!-- MATRIX RAIN BG -->
 <canvas id="bgCanvas"></canvas>
 
+<!-- PARTICLES BG -->
+<canvas id="particleCanvas"></canvas>
+
 <!-- LOADING -->
 <div id="loading">
   <div class="loader-ring"></div>
-  <div class="loader-text">KRYZEN<span class="dots"></span></div>
-  <div class="loader-sub">Initializing AI core...</div>
+  <div class="loader-text" data-i18n="brand">KRYZEN<span class="dots"></span></div>
+  <div class="loader-sub" data-i18n="loading">Initializing AI core...</div>
 </div>
 
-<!-- CURSOR GLOW -->
+<!-- CURSOR GLOW + TRAIL -->
 <div id="cursorGlow"></div>
+<canvas id="trailCanvas"></canvas>
 
-<!-- NAV -->
+<!-- KONAMI EASTER EGG OVERLAY -->
+<div id="konamiOverlay">
+  <div class="konami-content">
+    <h2>🎮 KONAMI CODE ACTIVATED!</h2>
+    <p data-i18n="konami_msg">Siz top-secret easter egg'ni topdingiz!</p>
+    <p style="margin-top:20px;font-size:80px;animation:spin 2s linear infinite">🚀</p>
+    <p style="margin-top:20px;color:var(--neon)" data-i18n="bonus">Bonus: +100 creativity points</p>
+    <button class="btn primary" onclick="document.getElementById('konamiOverlay').classList.remove('show')" data-i18n="close" style="margin-top:30px">Yopish</button>
+  </div>
+</div>
+
+<!-- TOPBAR -->
 <header class="topbar">
   <div class="logo" onclick="App.go('home')">
     <span class="logo-bracket">[</span>
@@ -33,17 +69,44 @@
     <span class="logo-bracket">]</span>
     <span class="logo-sub">AI.PORTFOLIO</span>
   </div>
+
   <nav class="nav" id="nav">
-    <a class="nav-link active" data-page="home" onclick="App.go('home')">🏠 Home</a>
-    <a class="nav-link" data-page="about" onclick="App.go('about')">👤 About</a>
-    <a class="nav-link" data-page="projects" onclick="App.go('projects')">💼 Projects</a>
-    <a class="nav-link" data-page="skills" onclick="App.go('skills')">🛠 Skills</a>
-    <a class="nav-link" data-page="experience" onclick="App.go('experience')">📅 Experience</a>
-    <a class="nav-link" data-page="contact" onclick="App.go('contact')">📧 Contact</a>
+    <a class="nav-link active" data-page="home" data-i18n="nav_home" onclick="App.go('home')">🏠 Home</a>
+    <a class="nav-link" data-page="about" data-i18n="nav_about" onclick="App.go('about')">👤 About</a>
+    <a class="nav-link" data-page="projects" data-i18n="nav_projects" onclick="App.go('projects')">💼 Projects</a>
+    <a class="nav-link" data-page="blog" data-i18n="nav_blog" onclick="App.go('blog')">📝 Blog</a>
+    <a class="nav-link" data-page="skills" data-i18n="nav_skills" onclick="App.go('skills')">🛠 Skills</a>
+    <a class="nav-link" data-page="experience" data-i18n="nav_experience" onclick="App.go('experience')">📅 Experience</a>
+    <a class="nav-link" data-page="contact" data-i18n="nav_contact" onclick="App.go('contact')">📧 Contact</a>
   </nav>
-  <button class="ai-toggle" onclick="App.toggleChat()">
-    <span class="ai-dot"></span> AI Chat
-  </button>
+
+  <div class="topbar-tools">
+    <!-- Theme switcher -->
+    <div class="theme-switcher" title="Change theme">
+      <button class="theme-btn active" data-theme="cyan" style="background:#00D4FF"></button>
+      <button class="theme-btn" data-theme="purple" style="background:#8B5CF6"></button>
+      <button class="theme-btn" data-theme="pink" style="background:#ec4899"></button>
+      <button class="theme-btn" data-theme="green" style="background:#10b981"></button>
+      <button class="theme-btn" data-theme="amber" style="background:#f59e0b"></button>
+    </div>
+
+    <!-- Language switcher -->
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="uz">UZ</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ru">RU</button>
+    </div>
+
+    <!-- Music toggle -->
+    <button class="music-toggle" onclick="App.toggleMusic()" title="Background music">
+      <span id="musicIcon">🔇</span>
+    </button>
+
+    <!-- AI Chat -->
+    <button class="ai-toggle" onclick="App.toggleChat()">
+      <span class="ai-dot"></span> <span data-i18n="ai_chat">AI Chat</span>
+    </button>
+  </div>
 </header>
 
 <!-- HERO -->
@@ -51,42 +114,41 @@
   <div class="hero-grid">
     <div class="hero-left fade-in">
       <div class="hero-status">
-        <span class="status-dot"></span> AVAILABLE FOR HIRE
+        <span class="status-dot"></span> <span data-i18n="available">AVAILABLE FOR HIRE</span>
       </div>
       <h1 class="hero-title">
-        <span class="hero-greet">Salom, men</span>
+        <span class="hero-greet" data-i18n="greeting">Salom, men</span>
         <span class="hero-name glow">KRYZEN</span>
-        <span class="hero-role">Full-Stack Developer</span>
-        <span class="hero-spec">+ AI Engineer</span>
+        <span class="hero-role" data-i18n="hero_role">Full-Stack Developer</span>
+        <span class="hero-spec" data-i18n="hero_spec">+ AI Engineer</span>
       </h1>
-      <p class="hero-desc">
-        Cyberpunk dizayn va AI yechimlar yarataman. 
-        Zamonaviy web, mobil va AI loyihalar — 5+ yil tajriba.
+      <p class="hero-desc" data-i18n="hero_desc">
+        Cyberpunk dizayn va AI yechimlar yarataman. Zamonaviy web, mobil va AI loyihalar — 5+ yil tajriba.
       </p>
       <div class="hero-cta">
         <button class="btn primary" onclick="App.go('projects')">
-          💼 Loyihalarni ko'rish
+          💼 <span data-i18n="cta_projects">Loyihalarni ko'rish</span>
         </button>
         <button class="btn ghost" onclick="App.toggleChat(true)">
-          🤖 AI bilan suhbat
+          🤖 <span data-i18n="cta_chat">AI bilan suhbat</span>
         </button>
       </div>
       <div class="hero-stats">
         <div class="stat">
           <div class="stat-val" data-count="50">0</div>
-          <div class="stat-label">Loyihalar</div>
+          <div class="stat-label" data-i18n="stat_projects">Loyihalar</div>
         </div>
         <div class="stat">
           <div class="stat-val" data-count="25">0</div>
-          <div class="stat-label">Mijozlar</div>
+          <div class="stat-label" data-i18n="stat_clients">Mijozlar</div>
         </div>
         <div class="stat">
           <div class="stat-val" data-count="5">0</div>
-          <div class="stat-label">Yil tajriba</div>
+          <div class="stat-label" data-i18n="stat_years">Yil tajriba</div>
         </div>
         <div class="stat">
           <div class="stat-val" data-count="100">0</div>
-          <div class="stat-label">% Sifat</div>
+          <div class="stat-label" data-i18n="stat_quality">% Sifat</div>
         </div>
       </div>
     </div>
@@ -126,16 +188,16 @@
         <span class="logo-text">KRYZEN</span>
         <span class="logo-bracket">]</span>
       </div>
-      <p class="footer-text">AI-powered portfolio. Built with ❤️ and 🤖</p>
+      <p class="footer-text" data-i18n="footer_text">AI-powered portfolio. Built with ❤️ and 🤖</p>
     </div>
     <div>
-      <h4 class="footer-title">Quick Links</h4>
-      <a class="footer-link" onclick="App.go('home')">Home</a>
-      <a class="footer-link" onclick="App.go('projects')">Projects</a>
-      <a class="footer-link" onclick="App.go('contact')">Contact</a>
+      <h4 class="footer-title" data-i18n="quick_links">Quick Links</h4>
+      <a class="footer-link" onclick="App.go('home')" data-i18n="nav_home">Home</a>
+      <a class="footer-link" onclick="App.go('projects')" data-i18n="nav_projects">Projects</a>
+      <a class="footer-link" onclick="App.go('contact')" data-i18n="nav_contact">Contact</a>
     </div>
     <div>
-      <h4 class="footer-title">Connect</h4>
+      <h4 class="footer-title" data-i18n="connect">Connect</h4>
       <a href="https://github.com/KRYZENSYS" target="_blank" class="footer-link">💻 GitHub</a>
       <a href="https://t.me/KRYZENVIP" target="_blank" class="footer-link">📨 Telegram</a>
       <a href="https://instagram.com/KRYZENVIP" target="_blank" class="footer-link">📷 Instagram</a>
@@ -153,38 +215,46 @@
     <div class="chat-title">
       <span class="ai-pulse"></span>
       <span>KRYZEN AI</span>
-      <span class="chat-status">online</span>
+      <span class="chat-status" data-i18n="online">online</span>
+      <span class="ai-badge" id="aiBadge">MOCK</span>
     </div>
-    <button class="chat-close" onclick="App.toggleChat()">✕</button>
+    <div class="chat-controls">
+      <button class="chat-control" onclick="Chat.clear()" title="Clear chat">🗑️</button>
+      <button class="chat-control" onclick="Chat.toggleVoice()" title="Voice input" id="voiceBtn">🎤</button>
+      <button class="chat-control" onclick="Chat.toggleSpeech()" title="Speak reply" id="speechBtn">🔊</button>
+      <button class="chat-close" onclick="App.toggleChat()">✕</button>
+    </div>
   </div>
   <div class="chat-messages" id="chatMessages">
     <div class="msg ai">
       <div class="msg-avatar">🤖</div>
       <div class="msg-body">
         <div class="msg-name">KRYZEN AI</div>
-        <div class="msg-text">
-          Salom! 👋 Men KRYZEN ning AI yordamchisiman. 
+        <div class="msg-text" data-i18n="ai_welcome">
+          Salom! 👋 Men KRYZEN ning AI yordamchisiman.
           <br><br>Loyihalar, ko'nikmalar, tajriba haqida savol bering.
-          <br><br>Misol: <em>"Eng yaxshi loyihang qaysi?"</em> yoki <em>"React bilasanmi?"</em>
+          <br><br>Misol: <em>"Eng yaxshi loyihang qaysi?"</em>
         </div>
       </div>
     </div>
   </div>
-  <div class="chat-suggestions" id="chatSuggestions">
-    <button class="suggestion" onclick="Chat.ask('Eng yaxshi loyihalaring qaysi?')">Eng yaxshi loyihalar</button>
-    <button class="suggestion" onclick="Chat.ask('Qanday texnologiyalar ishlatasan?')">Texnologiyalar</button>
-    <button class="suggestion" onclick="Chat.ask('Tajribang haqida gapir')">Tajriba</button>
-    <button class="suggestion" onclick="Chat.ask('Qanday bog'lanish mumkin?')">Bog'lanish</button>
-  </div>
+  <div class="chat-suggestions" id="chatSuggestions"></div>
   <form class="chat-input" id="chatForm">
-    <input type="text" id="chatInput" placeholder="Savol bering..." autocomplete="off">
+    <input type="text" id="chatInput" placeholder="Savol bering..." data-i18n-placeholder="chat_placeholder" autocomplete="off">
     <button type="submit" class="chat-send">📤</button>
   </form>
 </div>
 
-<!-- TOAST -->
-<div id="toastZone"></div>
+<!-- MUSIC -->
+<audio id="bgMusic" loop preload="none">
+  <source src="https://cdn.pixabay.com/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
+</audio>
 
+<!-- TOAST + KEYBOARD HINTS -->
+<div id="toastZone"></div>
+<div class="kbd-hint" id="kbdHint">⌨️ Press 1-7 to navigate · Konami: ↑↑↓↓←→←→BA</div>
+
+<script src="i18n.js"></script>
 <script src="data.js"></script>
 <script src="app.js"></script>
 </body>
