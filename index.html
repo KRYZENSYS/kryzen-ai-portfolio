@@ -98,7 +98,9 @@
     </div>
 
     <!-- Music toggle -->
-    <button class="music-toggle" onclick="App.toggleMusic()" title="Background music">
+    <button id="pwaInstallBtn" class="music-toggle" onclick="installPWA()" style="display:none" title="PWA o'rnatish">📱</button>
+      <span class="music-toggle" id="netStatus" style="pointer-events:none">🟢</span>
+      <button class="music-toggle" onclick="App.toggleMusic()" title="Background music">
       <span id="musicIcon">🔇</span>
     </button>
 
